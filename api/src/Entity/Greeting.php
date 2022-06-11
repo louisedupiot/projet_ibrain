@@ -6,12 +6,8 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
-/**
- * This is a dummy entity. Remove it!
- */
-#[ApiResource(mercure: true)]
-#[ORM\Entity]
-class Greeting
+
+class Game
 {
     /**
      * The entity ID
@@ -21,9 +17,7 @@ class Greeting
     #[ORM\GeneratedValue]
     private ?int $id = null;
 
-    /**
-     * A nice person
-     */
+
     #[ORM\Column]
     #[Assert\NotBlank]
     public string $name = '';
